@@ -293,7 +293,7 @@ static CGFloat kCHNotebookClippingRectMargin = 20.0f;
 		if ( mergedRects.count == 1 ) {
 			NSRect theRect = [[mergedRects objectAtIndex:0] rectValue];
 			if ( theRect.origin.x <= kCHNotebookTextContainerPadding 
-					&& theRect.size.width >= self.containerSize.width - kCHNotebookTextContainerPadding ) {
+					&& theRect.size.width + theRect.origin.x >= self.containerSize.width - kCHNotebookTextContainerPadding ) {
 				
 				// preserve the proposed x origin and height
 				reproposedRect.origin.x = proposedRect.origin.x;
